@@ -1,0 +1,229 @@
+:root {
+	box-sizing: border-box;
+	--blue: rgb(28, 147, 221);
+	--orange: rgb(240, 188, 2);
+	--lightGrey: rgba(210, 220, 228, 0.641);
+	--black: black;
+	--white: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr, minmax(7rem 7rem) 7fr;
+	grid-template-rows: 1fr 7fr;
+	margin: 0;
+	height: 100vh;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--blue);
+	grid-row-start: 1;
+	grid-row-end: 3;
+	padding: 1rem 3rem 1rem 1rem;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 1.5rem;
+}
+
+.dashboard-logo {
+	color: var(--white);
+}
+
+.dashboard {
+	color: var(--white);
+	margin: 1rem;
+}
+
+.nav-elements {
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+.navbar-links {
+	margin: 0.5rem 0;
+	color: var(--white);
+	font-weight: 700;
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+}
+
+.sidebar-icons,
+.trending-user-icons {
+	margin-right: 0.5rem;
+}
+
+header {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	padding: 1rem 2rem;
+	display: grid;
+	grid-template: repeat(2, minmax(5.1rem, 5.1rem)) / 2fr 1fr;
+	box-shadow: 0 4px 15px -8px var(--black);
+}
+
+.searchbar,
+.profile-links {
+	display: flex;
+	align-items: center;
+}
+
+.search {
+	width: 100%;
+	padding: 0.3rem 0.8rem;
+	border-radius: 1rem;
+	border-style: none;
+	background-color: var(--lightGrey);
+	margin: 0 1rem;
+}
+
+.profile-links {
+	justify-content: flex-end;
+}
+
+.profile-elements {
+	margin: 0 0.5rem;
+}
+
+.account-name {
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.greeting-section {
+	display: flex;
+	align-items: center;
+}
+
+.name-greeting,
+.hi-there {
+	margin: 0 0.5rem;
+}
+
+.create-content {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.create {
+	border-radius: 2rem;
+	border-style: none;
+	background-color: var(--blue);
+	color: var(--white);
+	margin-left: 1rem;
+	padding: 0.5rem 1.5rem;
+	font-size: 1.1rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+main {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color: var(--lightGrey);
+	padding: 1rem 2rem;
+	display: grid;
+	grid-template-columns: 2.5fr 1fr;
+	column-gap: 2rem;
+	row-gap: 2rem;
+}
+
+.main-content-headers {
+	font-weight: 400;
+	font-size: 1.3rem;
+}
+
+.projects {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+	column-gap: 1rem;
+	row-gap: 1rem;
+	height: 90%;
+}
+
+.project-card {
+	padding: 1rem 2rem 2rem 2rem;
+	background-color: var(--white);
+	border-radius: 0.5rem;
+	border-left: 5px solid var(--orange);
+}
+
+.project-description {
+	font-size: 1.1rem;
+}
+
+.project-interaction {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.project-card-icons {
+	margin-left: 1rem;
+	cursor: pointer;
+}
+
+.announcements-trending {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: grid;
+	grid-template-rows: repeat(2, minmax(1fr fr));
+}
+
+.announcement-card,
+.trending-card {
+	background-color: var(--white);
+	padding: 2rem;
+	border-radius: 0.5rem;
+}
+
+.announcement-heading {
+	margin: 0;
+}
+
+.announcement-description {
+	margin-top: 0.2rem;
+	font-size: 0.9rem;
+}
+
+hr {
+	color: var(--lightGrey);
+}
+
+.trending-card {
+	padding: 0.5rem 1.5rem;
+}
+
+.trend {
+	display: flex;
+	align-items: flex-end;
+	margin: 1rem 0;
+}
+
+.trending-user {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.at,
+.username {
+	margin: 0;
+	font-size: 0.9rem;
+}
